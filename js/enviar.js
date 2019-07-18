@@ -1045,17 +1045,9 @@ $(document).ready(function(){
       })
       //FIN SUBSRIBIR accesorios
 
-      // Guardar valores de cada formulario abierto
-      var clase=$(this).val("#claseInputContacto");
-      console.log('clase', clase)
-      var rutaContacto=$(this).val("#inputRutaContacto");
-      console.log('rutaContacto', rutaContacto)
 
-      var claseSubscribir=$(this).val("#inputSubscribirClase");
-      var rutaSubscribir=$(this).val("#inputRutaSubs");
-
-      //Codificamos la funcion que hara al obtener las variables anteriores
-      $('.+clase').submit(function(e){
+      //CONTACTO acesorio
+      $('.contactoAsper').submit(function(e){
         e.preventDefault();
   
         swal({
@@ -1069,7 +1061,7 @@ $(document).ready(function(){
                 
             if(result.value){
       
-              window.location ="rutaContacto";
+              window.location ="aspersores.html";
             }
       
       
@@ -1096,7 +1088,7 @@ $(document).ready(function(){
                         
         //             if(result.value){
               
-        //               window.location =rutaContacto;
+        //               window.location ="aspersores.html";
         //             }
               
               
@@ -1104,5 +1096,59 @@ $(document).ready(function(){
         //     }
         // })//FIN AJAX
       })
+      //FIN CONTACTO accesorios
+  
+      //SUBSRIBIR accesorios
+      $('.subscribirAsper').submit(function(e){
+        e.preventDefault();
+  
+        swal({
+            position: 'top-end',
+            type: 'success',
+            title: 'Suscripcion Correcta!',
+            text :'Gracias por suscribirte, en breve nos comunicaremos contigo',
+            showConfirmButton: true,
+            
+            }).then((result)=>{
+                
+            if(result.value){
+      
+              window.location ="aspersores.html";
+            }
+      
+      
+          });//fin swal
+  
+         
+        /*CODIGO A EJECUTAR EN UN HOSTING */
+  
+  
+        // var datos = $(this).serialize();
+        // $.ajax({
+        //     type:'post',
+        //     url:'subscribir.php',
+        //     data:datos,
+        //     success:function(data){
+        //         swal({
+        //             position: 'top-end',
+        //             type: 'success',
+        //             title: 'Datos Enviados!',
+        //             text :'Gracias por escribirnos, en breve nos comunicaremos contigo',
+        //             showConfirmButton: true,
+                    
+        //             }).then((result)=>{
+                        
+        //             if(result.value){
+              
+        //               window.location ="aspersores.html";
+        //             }
+              
+              
+        //           });//fin swal
+        //     }
+        // })//FIN AJAX
+      })
+      //FIN SUBSRIBIR accesorios
+     
 
 })
